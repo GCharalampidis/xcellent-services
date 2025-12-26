@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building2, MapPin, Mail, Globe, Badge } from "lucide-react"
-import { company } from "@/config/company"
+import { company } from "../config/company"
 
 export default function CompanyInfoPage() {
   return (
@@ -10,7 +10,7 @@ export default function CompanyInfoPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[oklch(0.25_0.02_240)]">
-              Υποχρεωτικά Στοιχεία Εταιρείας
+              Στοιχεία Εταιρείας
             </h1>
             <p className="text-lg text-[oklch(0.45_0_0)] leading-relaxed">Σύμφωνα με το άρθρο 47 του ν.4072/2012</p>
           </div>
@@ -29,7 +29,7 @@ export default function CompanyInfoPage() {
                 <div>
                   <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Επωνυμία Εταιρείας</dt>
                   <dd className="text-base text-[oklch(0.25_0.02_240)]">
-                    Επωνυμία Εταιρείας Ιδιωτική Κεφαλαιουχική Εταιρία
+                    {company.legalName}
                   </dd>
                 </div>
                 <div>
@@ -60,15 +60,9 @@ export default function CompanyInfoPage() {
               <CardContent className="space-y-4">
                 <div>
                   <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Αριθμός Γ.Ε.ΜΗ.</dt>
-                  <dd className="text-base text-[oklch(0.25_0.02_240)] font-mono">123456789000</dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Εταιρικό Κεφάλαιο</dt>
-                  <dd className="text-base text-[oklch(0.25_0.02_240)] font-semibold">€10.000,00</dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Εγγυητικές Εισφορές</dt>
-                  <dd className="text-base text-[oklch(0.25_0.02_240)]">€0,00</dd>
+                  <dd className="text-base text-[oklch(0.25_0.02_240)] font-mono">
+                    {company.gemiNumber}
+                  </dd>
                 </div>
               </CardContent>
             </Card>
@@ -84,16 +78,18 @@ export default function CompanyInfoPage() {
               <CardContent className="space-y-4">
                 <div>
                   <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Έδρα Εταιρείας</dt>
-                  <dd className="text-base text-[oklch(0.25_0.02_240)]">Αθήνα, Ελλάδα</dd>
+                  <dd className="text-base text-[oklch(0.25_0.02_240)]">
+                    {company.address.city}, {company.address.country}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Πλήρης Ταχυδρομική Διεύθυνση</dt>
                   <dd className="text-base text-[oklch(0.25_0.02_240)]">
-                    Οδός Παραδείγματος 123
+                    {company.address.street} {company.address.number}
                     <br />
-                    Τ.Κ. 10000, Αθήνα
+                    Τ.Κ. {company.address.postalCode}, {company.address.city}
                     <br />
-                    Ελλάδα
+                    {company.address.country}
                   </dd>
                 </div>
               </CardContent>
@@ -110,15 +106,8 @@ export default function CompanyInfoPage() {
               <CardContent className="space-y-4">
                 <div>
                   <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Εταιρική Ιστοσελίδα</dt>
-                  <dd className="text-base text-[oklch(0.25_0.02_240)]">https://example-company.gr</dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-semibold text-[oklch(0.45_0_0)] mb-1">Εταιρικό Email</dt>
                   <dd className="text-base text-[oklch(0.25_0.02_240)]">
-                    <a href="mailto:info@example-company.gr" className="hover:underline flex items-center gap-2">
-                      <Mail className="w-4 h-4" />
-                      info@example-company.gr
-                    </a>
+                    {company.website}
                   </dd>
                 </div>
               </CardContent>

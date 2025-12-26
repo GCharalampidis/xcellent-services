@@ -1,23 +1,18 @@
 export const company = {
-  legalName: "Bread and Butter",
-  tradeName: "Διακριτικός Τίτλος",
-  legalForm: "Ιδιωτική Κεφαλαιουχική Εταιρία (ΙΚΕ)",
-
-  gemiNumber: "123456789000",
-  capital: "10.000,00 €",
-  guaranteeContributions: "0,00 €",
-
+  legalName: "Bread and Flavors ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ",
+  tradeName: "Bread and Flavors",
+  legalForm: "ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ",
+  vatNumber: "802946585", // ΑΦΜ
+  gemiNumber: "185949506000", // ΑΡ ΓΕΜΗ
+  taxOffice: "ΔΟΥ ΑΜΠΕΛΟΚΗΠΩΝ",
   status: "Ενεργή",
-  purpose: "Παροχή συμβουλευτικών υπηρεσιών πληροφορικής",
-
+  purpose: "Παροχή συμβουλευτικών υπηρεσιών",
   address: {
-    street: "Οδός Παράδειγμα",
-    number: "12",
-    postalCode: "10558",
-    city: "Αθήνα",
-    country: "Ελλάδα",
+    street: "ΘΕΣΣΑΛΟΝΙΚΗΣ",
+    number: "64",
+    postalCode: "57013",
+    city: "ΩΡΑΙΟΚΑΣΤΡΟ",
+    country: "ΕΛΛΑΔΑ",
   },
-
-  website: "https://www.example.gr",
-  email: "info@example.gr",
-}
+  website: "https://www.breadandflavors.org"
+};

@@ -5,27 +5,42 @@ import { Analytics } from "@vercel/analytics/next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import "./globals.css"
+import { company } from "./config/company"
 
 const inter = Inter({ subsets: ["latin", "greek"] })
 
 export const metadata: Metadata = {
-  title: "Επωνυμία Εταιρείας ΙΚΕ - Ιδιωτική Κεφαλαιουχική Εταιρία",
-  description: "Επίσημη ιστοσελίδα της Επωνυμία Εταιρείας ΙΚΕ με πλήρη στοιχεία σύμφωνα με τον ν.4072/2012",
-  keywords: "ΙΚΕ, Ιδιωτική Κεφαλαιουχική Εταιρία, Ελλάδα, ΓΕΜΗ",
-  generator: "v0.app",
+  title: `${company.tradeName} ΙΚΕ - Επίσημη Ιστοσελίδα`,
+  description: `Επίσημη ιστοσελίδα της ${company.tradeName} ΙΚΕ με πλήρη στοιχεία σύμφωνα με τον ν.4072/2012`,
+  keywords: [
+    "ΙΚΕ",
+    "Ιδιωτική Κεφαλαιουχική Εταιρεία",
+    "Εταιρεία",
+    "Στοιχεία Εταιρείας",
+    "Νομικά Στοιχεία",
+    "Ελληνική Εταιρεία",
+    "Σύσταση ΙΚΕ",
+    "Εταιρικό Καταστατικό",
+    "Διαχείριση Εταιρείας",
+    "Σκοπός Εταιρείας",
+    "Επικοινωνία Εταιρείας",
+  ],
+  authors: [{ name: company.tradeName, url: company.website }],
+  generator: `v0.app`,
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "/favicon.svg",
         type: "image/svg+xml",
+      },
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+      {
+        url: "/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96"
       },
     ],
     apple: "/apple-icon.png",
@@ -39,6 +54,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="el">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className={`${inter.className} font-sans antialiased flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-1">{children}</main>

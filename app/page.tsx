@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="bg-[oklch(0.25_0.02_240)] text-[oklch(0.98_0_0)] py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">{company.legalName}</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">{company.tradeName}</h1>
             <p className="text-lg md:text-xl text-[oklch(0.85_0.02_240)] mb-8 text-pretty leading-relaxed">
               Ιδιωτική Κεφαλαιουχική Εταιρία με έδρα την Ελλάδα. Παρέχουμε επαγγελματικές υπηρεσίες με διαφάνεια,
               αξιοπιστία και πλήρη συμμόρφωση προς το ελληνικό νομικό πλαίσιο.
@@ -23,14 +23,6 @@ export default function HomePage() {
                 className="bg-[oklch(0.98_0_0)] text-[oklch(0.25_0.02_240)] hover:bg-[oklch(0.92_0_0)]"
               >
                 <Link href="/company-info">Στοιχεία Εταιρείας</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-[oklch(0.98_0_0)] text-[oklch(0.98_0_0)] hover:bg-[oklch(0.98_0_0)] hover:text-[oklch(0.25_0.02_240)] bg-transparent"
-              >
-                <Link href="/contact">Επικοινωνία</Link>
               </Button>
             </div>
           </div>
@@ -50,7 +42,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
             <Link href="/company-info" className="group">
               <Card className="h-full transition-all hover:shadow-lg border-[oklch(0.85_0_0)]">
                 <CardContent className="p-6 flex flex-col items-center text-center">
@@ -65,20 +57,6 @@ export default function HomePage() {
               </Card>
             </Link>
 
-            <Link href="/partners" className="group">
-              <Card className="h-full transition-all hover:shadow-lg border-[oklch(0.85_0_0)]">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-lg bg-[oklch(0.25_0.02_240)] text-[oklch(0.98_0_0)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2 text-[oklch(0.25_0.02_240)]">Εταίροι & Διαχείριση</h3>
-                  <p className="text-sm text-[oklch(0.45_0_0)] text-pretty leading-relaxed">
-                    Εταίροι, διαχειριστές, εισφορές
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
             <Link href="/purpose" className="group">
               <Card className="h-full transition-all hover:shadow-lg border-[oklch(0.85_0_0)]">
                 <CardContent className="p-6 flex flex-col items-center text-center">
@@ -88,20 +66,6 @@ export default function HomePage() {
                   <h3 className="font-semibold text-lg mb-2 text-[oklch(0.25_0.02_240)]">Σκοπός Εταιρείας</h3>
                   <p className="text-sm text-[oklch(0.45_0_0)] text-pretty leading-relaxed">
                     Αντικείμενο και δραστηριότητες
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/contact" className="group">
-              <Card className="h-full transition-all hover:shadow-lg border-[oklch(0.85_0_0)]">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-lg bg-[oklch(0.25_0.02_240)] text-[oklch(0.98_0_0)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2 text-[oklch(0.25_0.02_240)]">Επικοινωνία</h3>
-                  <p className="text-sm text-[oklch(0.45_0_0)] text-pretty leading-relaxed">
-                    Εταιρικό email και στοιχεία επικοινωνίας
                   </p>
                 </CardContent>
               </Card>

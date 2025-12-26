@@ -2,8 +2,9 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X, Building2 } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { company } from "../app/config/company"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -11,9 +12,7 @@ export function Header() {
   const navLinks = [
     { href: "/", label: "Αρχική" },
     { href: "/company-info", label: "Στοιχεία Εταιρείας" },
-    { href: "/partners", label: "Εταίροι & Διαχείριση" },
     { href: "/purpose", label: "Σκοπός" },
-    { href: "/contact", label: "Επικοινωνία" },
   ]
 
   return (
@@ -25,8 +24,8 @@ export function Header() {
             href="/"
             className="flex items-center gap-2 font-bold text-xl text-[oklch(0.25_0.02_240)] hover:text-[oklch(0.35_0.02_240)] transition-colors"
           >
-            <Building2 className="w-6 h-6" />
-            <span className="hidden sm:inline">Επωνυμία Εταιρείας ΙΚΕ</span>
+            <img src="/favicon.svg" alt="Bread and Flavors Logo" className="w-8 h-8" />
+            <span className="hidden sm:inline">{company.tradeName}</span>
             <span className="sm:hidden">ΙΚΕ</span>
           </Link>
 
