@@ -24,7 +24,7 @@ export function Header() {
             href="/"
             className="flex items-center gap-2 font-bold text-xl text-[oklch(0.25_0.02_240)] hover:text-[oklch(0.35_0.02_240)] transition-colors"
           >
-            <img src="/favicon.svg" alt="Bread and Flavors Logo" className="w-8 h-8" />
+            <img src="/favicon.svg" alt="Xcellent Services Logo" className="w-8 h-8" />
             <span className="hidden sm:inline">{company.tradeName}</span>
             <span className="sm:hidden">ΙΚΕ</span>
           </Link>

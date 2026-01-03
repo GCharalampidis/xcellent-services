@@ -1,9 +1,9 @@
 export const company = {
-  legalName: "Bread and Flavors ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ",
-  tradeName: "Bread and Flavors",
+  legalName: "Xcellent Services ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ",
+  tradeName: "Xcellent Services",
   legalForm: "ΜΟΝΟΠΡΟΣΩΠΗ ΙΔΙΩΤΙΚΗ ΚΕΦΑΛΑΙΟΥΧΙΚΗ ΕΤΑΙΡΕΙΑ",
-  vatNumber: "802946585", // ΑΦΜ
-  gemiNumber: "185949506000", // ΑΡ ΓΕΜΗ
+  vatNumber: "802948321", // ΑΦΜ
+  gemiNumber: "185985006000", // ΑΡ ΓΕΜΗ
   taxOffice: "ΔΟΥ ΑΜΠΕΛΟΚΗΠΩΝ",
   status: "Ενεργή",
   purpose: "Παροχή συμβουλευτικών υπηρεσιών",
@@ -14,5 +14,5 @@ export const company = {
     city: "ΩΡΑΙΟΚΑΣΤΡΟ",
     country: "ΕΛΛΑΔΑ",
   },
-  website: "https://www.breadandflavors.org"
+  website: "https://www.xcellentservices.org"
 };
